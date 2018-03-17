@@ -9,10 +9,42 @@ body > nav {
 
     a {
         color: $fg;
+        text-decoration: none;
     }
 
-    header > a {
-        text-decoration: none;
+    header {
+        perspective: 1000px;
+        position: relative;
+        width: 30em;
+        max-width: 30vw;
+
+        &:hover {
+            #header-coinprice {
+                opacity: 0;
+            }
+
+            #header-coinprice-cover {
+                transform: none;
+            }
+        }
+    }
+
+    header span {
+        display: block;
+        transition: all 0.2s ease-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 0.1em 0.4em;
+    }
+
+    #header-coinprice-cover {
+        transform: rotateX(90deg) translateY(2em);
+
+        &:hover {
+            color: $highlight;
+            background-color: white;
+        }
     }
 
     ul {
@@ -23,7 +55,6 @@ body > nav {
         
         a {
             display: inline-block;
-            text-decoration: none;
             padding: 0.1em;
             margin: 0 1em;
             transition: all 0.1s ease-in-out;

@@ -14,7 +14,12 @@
     <body>
     {{ end }}
         <nav>
-            <header><a href="/" id="header-coinprice">Crypto@UMN</a></header>
+            <header>
+                <a href="/">
+                    <span id="header-coinprice">Crypto@UMN</span>
+                    <span id="header-coinprice-cover">Crypto@UMN</span>
+                </a>
+            </header>
             <ul>
                 {{ range .Site.Sections }}
                     <li>
