@@ -1,0 +1,31 @@
+{
+  "name": "hugo-theme-cryptoumn",
+  "version": "1.0.0",
+  "description": "Hugo theme for the University of Minnesota Cryptocurrency Club's website",
+  "main": "src/js/index.ts",
+  "repository": "git@github.com:encody/hugo-theme-cryptoumn.git",
+  "author": "Jacob Lindahl <linda187@umn.edu>",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "watch": "./node_modules/.bin/webpack-cli --watch -d"
+  },
+  "devDependencies": {
+    "@types/bluebird": "^3.5.20",
+    "css-loader": "^0.28.10",
+    "cssnano": "^3.10.0",
+    "extract-loader": "^1.0.2",
+    "file-loader": "^1.1.11",
+    "import-glob-loader": "^1.1.0",
+    "node-sass": "^4.7.2",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.1",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.3",
+    "ts-loader": "^4.0.1",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.10"
+  }
+}

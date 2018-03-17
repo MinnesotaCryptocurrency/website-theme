@@ -1,0 +1,25 @@
+[data-typewrite] {
+    position: relative;
+}
+
+[data-typewrite]::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    width: 0.1em;
+    margin: 0.15em;
+    height: 1.5em;
+    background-color: $fg;
+    animation: blink 0.5s infinite alternate linear;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    80%, 100% {
+        opacity: 0;
+    }
+}

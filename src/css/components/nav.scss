@@ -1,0 +1,41 @@
+body > nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2em;
+    position: absolute;
+    width: 100%;
+    color: $fg;
+    z-index: 11;
+
+    a {
+        color: $fg;
+    }
+
+    header > a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        
+        a {
+            display: inline-block;
+            text-decoration: none;
+            padding: 0.1em;
+            margin: 0 1em;
+            transition: all 0.1s ease-in-out;
+
+            &.active {
+                border-bottom: 2px solid $secondary;
+            }
+
+            &:hover {
+                color: white;
+                border-bottom: 3px solid white;
+            }
+        }
+    }
+}

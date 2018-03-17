@@ -1,0 +1,72 @@
+{{ partial "header.html" . }}
+<section class="fancy-intro">
+    <h1 data-typewrite>University of Minnesota Cryptocurrency Club...</h1>
+    <p class="fade-in">Advancing cryptocurrency education in the Twin Cities</p>
+</section>
+<!-- <div class="diagonal-to-white"></div> -->
+<h2 class="right"><span>Mission</span></h2>
+<section>
+    <p>
+        Sit Lorem eiusmod culpa esse id magna aliqua do est voluptate laboris nisi Lorem. Labore cillum quis aliquip ullamco dolor duis tempor reprehenderit minim nulla tempor excepteur tempor. Magna aliqua proident voluptate sint velit irure officia nostrud. Est duis eu sit esse non eiusmod duis amet quis laborum dolor. Sit eiusmod laboris duis quis pariatur eu. Ipsum dolor labore minim incididunt irure ipsum magna.
+    </p>
+</section>
+<!-- <div class="diagonal-from-white"></div> -->
+<section>
+    <h2><span>Events</span></h2>
+    <div class="cards">
+        {{ with .Site.GetPage "section" "club-event" }}
+            {{ range first 3 .Pages }}
+                <div class="card">
+                    <a href="{{.Permalink}}">
+                        <img src="{{.Params.image}}" />
+                        <p>{{.Title}}
+                            <span class="date">{{.Date.Format "2006-01-02"}}</span>
+                        </p>
+                    </a>
+                </div>
+            {{ end }}
+        {{ end }}
+    </div>
+</section>
+<section>
+    <h2><span>Board</span></h2>
+    <div class="caricatures">
+        <div class="caricature">
+            <img src="http://via.placeholder.com/180x180">
+            <div>
+                <h3>Board Member</h3>
+                <p>
+                    Tempor sit nostrud consequat nostrud anim aute ut dolor voluptate mollit elit aute sint officia.
+                </p>
+            </div>
+        </div>
+        <div class="caricature">
+            <img src="http://via.placeholder.com/180x180">
+            <div>
+                <h3>Board Member</h3>
+                <p>
+                    Tempor sit nostrud consequat nostrud anim aute ut dolor voluptate mollit elit aute sint officia.
+                </p>
+            </div>
+        </div>
+        <div class="caricature">
+            <img src="http://via.placeholder.com/180x180">
+            <div>
+                <h3>Board Member</h3>
+                <p>
+                    Tempor sit nostrud consequat nostrud anim aute ut dolor voluptate mollit elit aute sint officia.
+                </p>
+            </div>
+        </div>
+        <div class="caricature">
+            <img src="http://via.placeholder.com/180x180">
+            <div>
+                <h3>Board Member</h3>
+                <p>
+                    Tempor sit nostrud consequat nostrud anim aute ut dolor voluptate mollit elit aute sint officia.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+{{ partial "footer.html" . }}

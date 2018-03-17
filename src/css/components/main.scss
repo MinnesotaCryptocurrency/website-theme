@@ -1,0 +1,113 @@
+body > main {
+    // article {
+    //     padding-top: 5em;
+    //     padding: 4em;
+    //     background-color: $primary;
+    //     color: $fg;
+    // }
+
+    section {
+        padding: 3em;
+        position: relative;
+        background-color: white;
+
+        &:nth-of-type(2n) {
+            padding-bottom: calc(3em - 80px / 2);
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                bottom: 0;
+                z-index: 21;
+                left: 0;
+                width: 100%;
+                background: linear-gradient(to right bottom, white 0%, white 50%, transparent 50.1%, transparent 100%);
+                height: 80px;
+                margin-bottom: -80px;
+            }
+        }
+
+        &:nth-of-type(2n+1) {
+            background: linear-gradient(to top left, $primary, $highlight);
+            color: $fg;
+            padding-bottom: calc(3em + 80px / 2);
+
+            h2 {
+                text-align: center;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                background: linear-gradient(to right bottom, transparent 0%, transparent 50%, white 50.1%, white 100%);
+                height: 80px;
+                bottom: 0;
+                position: absolute;
+                width: 100%;
+                left: 0;
+            }
+        }
+
+        // &:first-child {
+        //     background: white;
+        //     color: black;
+        // }
+
+        &.fancy-intro {
+            padding-top: 5em;
+            background: linear-gradient(to top left, $primary, $highlight);
+            color: $fg;
+        }
+    }
+    
+    // Fixes bug where the Hugo Markdown parser generates extra <p> tags
+    > p {
+        display: none;
+    }
+
+    h2 {
+        padding: 0 4em;
+
+        &.right {
+            text-align: right;
+        }
+
+        span {
+            position: relative;
+            font-variant: small-caps;
+
+            &::after {
+                content: '';
+                display: block;
+                width: 50%;
+                right: 0;
+                transform: translateX(-50%);
+                bottom: -0.4em;
+                height: 2px;
+                background-color: $highlight;
+                position: absolute;
+            }
+        }
+    }
+
+    ul {
+        list-style-type: square;
+    }
+
+    p a {
+        color: $gray;
+        text-decoration: none;
+        border-bottom: 1px dashed $gray;
+
+        &:hover {
+            color: black;
+            border-color: black;
+        }
+
+        .date {
+            margin-left: 1em;
+            font-size: 80%;
+        }
+    }
+}
