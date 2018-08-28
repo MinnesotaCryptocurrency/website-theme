@@ -1,11 +1,4 @@
 body > main {
-    // article {
-    //     padding-top: 5em;
-    //     padding: 4em;
-    //     background-color: $primary;
-    //     color: $fg;
-    // }
-
     section {
         padding: 3em;
         position: relative;
@@ -29,12 +22,13 @@ body > main {
         }
 
         &:nth-of-type(2n+1) {
-            background: linear-gradient(to top left, $primary, $highlight);
-            color: $fg;
+            background: linear-gradient(to top left, $color-primary, $color-primary-highlight);
+            color: $color-fg;
             padding-bottom: calc(3em + 80px / 2);
 
             h2 {
                 text-align: center;
+                text-shadow: 0 0 0.1em $color-gray;
             }
 
             &::after {
@@ -49,15 +43,11 @@ body > main {
             }
         }
 
-        // &:first-child {
-        //     background: white;
-        //     color: black;
-        // }
-
         &.fancy-intro {
             padding-top: 5em;
-            background: linear-gradient(to top left, $primary, $highlight);
-            color: $fg;
+            background: linear-gradient(to top left, $color-primary, $color-primary-highlight);
+            color: $color-fg;
+            text-shadow: 0 0 0.1em $color-gray;
         }
     }
     
@@ -75,7 +65,6 @@ body > main {
 
         span {
             position: relative;
-            font-variant: small-caps;
 
             &::after {
                 content: '';
@@ -85,7 +74,7 @@ body > main {
                 transform: translateX(-50%);
                 bottom: -0.4em;
                 height: 2px;
-                background-color: $highlight;
+                background-color: $color-primary-highlight;
                 position: absolute;
             }
         }
@@ -96,9 +85,9 @@ body > main {
     }
 
     p a {
-        color: $gray;
+        color: $color-gray;
         text-decoration: none;
-        border-bottom: 1px dashed $gray;
+        border-bottom: 1px dashed $color-gray;
 
         &:hover {
             color: black;

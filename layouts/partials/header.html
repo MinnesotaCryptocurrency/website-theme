@@ -15,15 +15,25 @@
     {{ end }}
         <nav>
             <header>
-                <a href="/">
-                    <span id="header-coinprice">Crypto@UMN</span>
-                    <span id="header-coinprice-cover">Crypto@UMN</span>
-                </a>
+                <span id="header-coinprice">Crypto@UMN</span>
             </header>
+            {{ $currentCategoryLink := .RelPermalink | string }}
             <ul>
+                <li>
+                    {{ if .IsHome }}
+                    <a href="/" class="active">Home</a>
+                    {{ else }}
+                    <a href="/">Home</a>
+                    {{ end }}
+                </li>
                 {{ range .Site.Sections }}
                     <li>
+                        {{ $categoryLink := relURL .Permalink | string }}
+                        {{ if eq $categoryLink $currentCategoryLink }}
+                        <a href="{{.Permalink}}" class="active">{{.Title}}</a>
+                        {{ else }}
                         <a href="{{.Permalink}}">{{.Title}}</a>
+                        {{ end }}
                     </li>
                 {{ end }}
             </ul>
