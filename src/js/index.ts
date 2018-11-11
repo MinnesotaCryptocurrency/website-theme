@@ -32,4 +32,4 @@ function showCoin () {
     });
 }
 
-setTimeout(showCoin, 6000);
+setTimeout(showCoin, 2000);

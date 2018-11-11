@@ -26,7 +26,6 @@ h2 {
 
 .fade-in {
     animation: fade-in 0.85s forwards;
-    animation-delay: 2.3s;
     opacity: 0;
 }
 
@@ -46,6 +45,7 @@ a.button {
     display: inline-block;
     background-color: $color-secondary;
     color: $color-fg;
+    font-weight: bold;
     padding: 0.5em 1.3em;
     cursor: pointer;
     text-decoration: none;
@@ -55,6 +55,15 @@ a.button {
     margin: 0.5em;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     box-shadow: 0 0 1px inset rgba(0, 0, 0, 0.2);
+
+    &.discord {
+        background-color: #7289da;
+
+        &:hover {
+            background-color: darken(#7289da, 2%);
+            color: white;
+        }
+    }
 
     &:hover {
         background-color: darken($color-secondary, 2%);

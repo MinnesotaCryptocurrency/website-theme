@@ -12,7 +12,7 @@
                     <img src="{{.Params.image}}" />
                     {{ end }}
                     <p>{{.Title}}
-                        <span class="date">{{.PublishDate.Format "2006-01-02"}}</span>
+                        <span class="date">{{.PublishDate.Local.Format "2006-01-02" }}</span>
                         {{ range .Param "tags" }}
                             <span class="tag">{{ . }}</span>
                         {{ end }}
