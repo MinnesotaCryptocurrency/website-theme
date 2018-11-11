@@ -1,24 +1,27 @@
 {{ partial "header.html" . }}
 <section class="fancy-intro">
-    <h1 data-typewrite>University of Minnesota Cryptocurrency Club...</h1>
+    <h1 data-typewrite>Minnesota Cryptocurrency...</h1>
     <p class="fade-in">Advancing cryptocurrency education in the Twin Cities</p>
 </section>
 <h2 class="right"><span>Mission</span></h2>
 <section>
     <p>
-        Sit Lorem eiusmod culpa esse id magna aliqua do est voluptate laboris nisi Lorem. Labore cillum quis aliquip ullamco dolor duis tempor reprehenderit minim nulla tempor excepteur tempor. Magna aliqua proident voluptate sint velit irure officia nostrud. Est duis eu sit esse non eiusmod duis amet quis laborum dolor. Sit eiusmod laboris duis quis pariatur eu. Ipsum dolor labore minim incididunt irure ipsum magna.
+        Minnesota Cryptocurrency has a mission of informing the students at the University of Minnesota and the wider Twin Cities community of news, developments, and advice regarding cryptocurrencies and applications of blockchain technology. Minnesota Cryptocurrency will first and foremost educate in these new technologies, advocate for their use and adoption, and support students and community members in a large, welcoming, knowledgeable community.
     </p>
 </section>
 <section>
     <h2><span>Events</span></h2>
     <div class="cards">
         {{ with .Site.GetPage "section" "club-event" }}
-            {{ range first 3 .Pages }}
+            {{ range first 3 .Pages.ByPublishDate.Reverse }}
                 <div class="card">
                     <a href="{{.Permalink}}">
                         <img src="{{.Params.image}}" />
                         <p>{{.Title}}
-                            <span class="date">{{.Date.Format "2006-01-02"}}</span>
+                            <span class="date">{{.PublishDate.Format "2006-01-02"}}</span>
+                            {{ range .Param "tags" }}
+                                <span class="tag">{{ . }}</span>
+                            {{ end }}
                         </p>
                     </a>
                 </div>
@@ -26,7 +29,7 @@
         {{ end }}
     </div>
 </section>
-<section>
+<!-- <section>
     <h2><span>Board</span></h2>
     <div class="caricatures">
         <div class="caricature">
@@ -66,5 +69,5 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 {{ partial "footer.html" . }}

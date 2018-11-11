@@ -49,6 +49,10 @@ body > main {
             color: $color-fg;
             text-shadow: 0 0 0.1em $color-gray;
         }
+
+        img {
+            max-width: 100%;
+        }
     }
     
     // Fixes bug where the Hugo Markdown parser generates extra <p> tags

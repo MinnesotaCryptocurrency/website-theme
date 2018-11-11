@@ -4,13 +4,23 @@
     {{.Content}}
 </section>
 <section>
-<ul>
-<!-- Ranges through content/post/*.md -->
-{{ range .Data.Pages }}
-    <li>
-        <a href="{{.Permalink}}">{{.Title}} <span class="date">{{.Date.Format "2006-01-02"}}</span></a>
-    </li>
-{{ end }}
-</ul></section>
+    <div class="cards">
+        {{ range .Pages.ByPublishDate.Reverse }}
+            <div class="card">
+                <a href="{{.Permalink}}">
+                    {{ if (isset .Params "image") }}
+                    <img src="{{.Params.image}}" />
+                    {{ end }}
+                    <p>{{.Title}}
+                        <span class="date">{{.PublishDate.Format "2006-01-02"}}</span>
+                        {{ range .Param "tags" }}
+                            <span class="tag">{{ . }}</span>
+                        {{ end }}
+                    </p>
+                </a>
+            </div>
+        {{ end }}
+    </div>
+</section>
 
 {{ partial "footer.html" . }}

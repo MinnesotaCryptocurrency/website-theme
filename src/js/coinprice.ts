@@ -27,13 +27,17 @@ export const coins: Coin[] = [
         symbol: 'DASH',
     },
     {
+        name: 'Nano',
+        symbol: 'NANO',
+    },
+    {
         name: 'ZCash',
         symbol: 'ZEC',
     },
-    // {
-    //     name: 'Bitcoin Cash',
-    //     symbol: 'BCH',
-    // },
+    {
+        name: 'Bitcoin Cash',
+        symbol: 'BCH',
+    },
     {
         name: 'Dogecoin',
         symbol: 'DOGE',
