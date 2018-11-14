@@ -1,0 +1,13 @@
+<div class="card">
+    <a href="{{.Permalink}}">
+        {{ if (isset .Params "image") }}
+        <img src="{{.Params.image}}" />
+        {{ end }}
+        <p>{{.Title}}
+            <span class="date">{{.PublishDate.Local.Format "2006-01-02" }}</span>
+            {{ range .Param "tags" }}
+                <span class="tag">{{ . }}</span>
+            {{ end }}
+        </p>
+    </a>
+</div>

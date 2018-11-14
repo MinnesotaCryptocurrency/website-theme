@@ -14,17 +14,7 @@
     <div class="cards">
         {{ with .Site.GetPage "section" "club-event" }}
             {{ range first 3 .Pages.ByPublishDate.Reverse }}
-                <div class="card">
-                    <a href="{{.Permalink}}">
-                        <img src="{{.Params.image}}" />
-                        <p>{{.Title}}
-                            <span class="date">{{.PublishDate.Format "2006-01-02"}}</span>
-                            {{ range .Param "tags" }}
-                                <span class="tag">{{ . }}</span>
-                            {{ end }}
-                        </p>
-                    </a>
-                </div>
+                {{ partial "card.html" . }}
             {{ end }}
         {{ end }}
     </div>
