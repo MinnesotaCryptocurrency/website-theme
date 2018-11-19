@@ -70,3 +70,15 @@ a.button {
         color: white;
     }
 }
+
+.addr {
+    display: inline-block;
+    padding: 5px;
+    margin: 5px;
+    font-family: monospace;
+    font-size: 70%;
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    word-break: break-all;
+}
