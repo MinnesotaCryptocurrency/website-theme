@@ -32,16 +32,8 @@
                     <a href="/">Home</a>
                     {{ end }}
                 </li>
-                {{ range .Site.Sections }}
-                    <li>
-                        {{ $categoryLink := relURL .Permalink | string }}
-                        {{ if eq $categoryLink $currentCategoryLink }}
-                        <a href="{{.Permalink}}" class="active">{{.Title}}</a>
-                        {{ else }}
-                        <a href="{{.Permalink}}">{{.Title}}</a>
-                        {{ end }}
-                    </li>
-                {{ end }}
+                <li><a href="https://calendar.google.com/calendar/embed?src=crypto%40umn.edu&ctz=America%2FChicago">Events</a></li>
+                <li><a href="https://www.subscribepage.com/mncryptocurrency">Newsletter</a></li>
             </ul>
         </nav>
         <main>
